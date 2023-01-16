@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+#calc {
+    width: 400px;
+    padding: .5em;
+    background-color: #c4c4c4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#calc h3 {
+    font-size: .8em;
+    font-weight: 300;
+    color: #666;
+} 
+
+#operations {
+    text-align: right;
+}
+
+#previus-operations {
+    color: #777;
+    padding: .2em;
+    overflow-wrap: break-word; /* Essa função serve para quando tiver muitos numeros, esses numeros não ultrapasse o tamanho da calculadora mas aumente a largura dela colocando os numero um abaixo do outro*/
+    min-height: 1.6em;
+}
+
+#current-operations {
+    min-height: 1.6em;
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0.2em;
+    overflow-wrap: break-word;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px; /*Para dar distancia entre um botão e o outro*/
+
+}
+
+#buttons-container button {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    height: 5em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
+#buttons-container .number {
+    background-color: #f3f3f3;
+}
+
+#buttons-container button:hover {
+    background-color: #bababa;
+    border-color: #999;
+}
+
+#buttons-container #equal-btn {
+    grid-column: span 2; /*Coloca dois espaços para ele ocupar*/
+    background-color: rgb(255, 174, 0);
+    border-radius: 15px;
+}
+
+#buttons-container #equal-btn:hover {
+    
+    background-color: rgb(255, 166, 0);
+}
